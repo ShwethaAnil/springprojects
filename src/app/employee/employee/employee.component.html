@@ -1,0 +1,22 @@
+<table border="1">
+  <tr>
+    <td>EmpId</td>
+    <td>{{empid}}</td>
+  </tr>
+  <tr>
+    <td>Emp Name</td>
+    <td>{{empname}}</td>
+  </tr>
+  <tr *ngIf='showDetails'>
+    <td>Salary</td>
+    <td>{{salary}}</td>
+  </tr>
+  <tr *ngIf='showDetails'>
+    <td>HireDate</td>
+    <td>{{hireDate}}</td>
+  </tr>
+</table>
+<br/>
+<button (click)='toggleDetails()'>
+  {{ showDetails ? 'Hide':'Show'}} Details
+</button>

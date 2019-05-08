@@ -1,0 +1,17 @@
+<table border="1">
+  <tr>
+    <th>Employee Id</th>
+    <th>Employee Name</th>
+    <th>Gender</th>
+    <th>Salary</th>
+    <th>Join Date</th>
+  </tr>
+  <tr *ngFor='let emp of employees'>
+    <td>{{emp.empid}}</td>
+    <td>{{emp.empname |uppercase 
+      | employeeTitle: emp.gender}}</td>
+    <td>{{emp.gender}}</td>
+    <td>{{emp.salary | currency:'USD':true}}</td>
+    <td>{{emp.hireDate| date:'fullDate'}}</td>
+  </tr>
+</table>
